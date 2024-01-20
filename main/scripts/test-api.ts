@@ -2,7 +2,7 @@ import {initBYOSupaglueSDK} from '@supaglue/sdk'
 
 const supaglue = initBYOSupaglueSDK({
   headers: {
-    'x-connection-id': 'outreach1',
+    'x-connection-id': 'test-connection-id',
     'x-provider-name': 'outreach',
   },
 })
