@@ -4,7 +4,12 @@ import {initNangoSDK} from '@opensdks/sdk-nango'
 
 // Dedupe this with main/env.ts
 export const env = createEnv({
-  server: {NANGO_SECRET_KEY: z.string(), POSTGRES_URL: z.string()},
+  server: {
+    NANGO_SECRET_KEY: z.string(),
+    POSTGRES_URL: z.string(),
+    NHOST_GRAPHQL_URL: z.string(),
+    NHOST_ADMIN_SECRET: z.string()
+  },
   runtimeEnv: process.env,
 })
 
