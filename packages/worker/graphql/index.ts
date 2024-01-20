@@ -3,43 +3,35 @@ import {env} from '../env'
 
 const client = new GraphQLClient(env.NHOST_GRAPHQL_URL, {
   headers: {
-    ['x-hasura-admin-secret']: env.NHOST_ADMIN_SECRET
+    ['x-hasura-admin-secret']: env.NHOST_WEBHOOK_SECRET
   }
 })
 
-interface UserData {
-  user: {
-    org_user: {
-      organization: {
-        paymentProfile: {
-          stripeCustomerId: string
+interface BatchData {
+  batch: {
+          id: string
+          status: string
+          created_at: string
         }
-      }
-    }
-  }
 }
 
 // Define the graphql operations below
 
-const getUserById = async (userId: string): Promise<UserData> => {
+const getData = async (): Promise<BatchData> => {
   const query = gql`
-    query getUser($id: uuid!) @cached(ttl: 120) {
-      user(id: $id) {
-        org_user {
-          organization {
-            paymentProfile {
-              stripeCustomerId
-            }
-          }
-        }
+    query myQuery {
+      email_validation_batches(limit: 1, order_by: {created_at: asc}) {
+        id
+        status
+        created_at
       }
     }
   `
-  return await client.request<UserData>(query, { id: userId })
+  return await client.request<BatchData>(query)
 }
 
 const graphqlWorker = {
-  getUserById
+  getData
 }
 
 export default graphqlWorker
