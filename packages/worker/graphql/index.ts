@@ -3,16 +3,16 @@ import {env} from '../env'
 
 const client = new GraphQLClient(env.NHOST_GRAPHQL_URL, {
   headers: {
-    ['x-hasura-admin-secret']: env.NHOST_WEBHOOK_SECRET
+    ['x-hasura-admin-secret']: env.NHOST_ADMIN_SECRET
   }
 })
 
 interface BatchData {
   batch: {
-          id: string
-          status: string
-          created_at: string
-        }
+    id: string
+    status: string
+    created_at: string
+  }
 }
 
 // Define the graphql operations below
@@ -30,8 +30,26 @@ const getData = async (): Promise<BatchData> => {
   return await client.request<BatchData>(query)
 }
 
+interface DataConnection {
+  data_connection: Array<{
+    id: number
+  }>
+}
+const getDataConnectionTest = async (): Promise<DataConnection> => {
+  const query = gql`
+    query DataConnectionQuery {
+      data_connection {
+        id
+        owner_id
+      }
+    }
+  `
+  return await client.request<DataConnection>(query)
+}
+
 const graphqlWorker = {
-  getData
+  getData,
+  getDataConnectionTest
 }
 
 export default graphqlWorker

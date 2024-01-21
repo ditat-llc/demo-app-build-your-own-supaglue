@@ -1,5 +1,6 @@
 import type {StrictObj} from '@supaglue/vdk'
 import {mapper, z, zCast} from '@supaglue/vdk'
+import graphqlWorker from '@supaglue/worker/graphql'
 import {
   initOutreachSDK,
   type OutreachSDK,
@@ -64,6 +65,10 @@ export const outreachProvider = {
           ) as '/sequences')
         : '/sequences',
     )
+    // Graphql operation here
+    const dataconnection = await graphqlWorker.getDataConnectionTest()
+    console.log(dataconnection)
+
     return {
       nextPageCursor: listResponse.parse(res.data).links?.next ?? undefined,
       items: res.data.data?.map(mappers.sequence) ?? [],

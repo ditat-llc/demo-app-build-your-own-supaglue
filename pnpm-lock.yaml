@@ -267,6 +267,9 @@ importers:
       '@supaglue/vdk':
         specifier: workspace:*
         version: link:../../packages/vdk
+      '@supaglue/worker':
+        specifier: workspace:*
+        version: link:../../packages/worker
 
 packages:
 

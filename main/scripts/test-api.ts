@@ -1,5 +1,4 @@
 import {initBYOSupaglueSDK} from '@supaglue/sdk'
-import graphqlWorker from '@supaglue/worker/graphql'
 
 const supaglue = initBYOSupaglueSDK({
   headers: {
@@ -16,14 +15,6 @@ async function main() {
       params: {query: {cursor}},
     })
     console.log('Success', r.data)
-
-    // Call the getData function from graphqlWorker aand handle the response
-    try {
-      const batchData = await graphqlWorker.getData();
-      console.log('GraphQL Data:', batchData);
-    } catch (error) {
-      console.error('GraphQL Error:', error);
-    }
 
     // Break the loop if there is no nextPageCursor
     if (!r.data.nextPageCursor) {

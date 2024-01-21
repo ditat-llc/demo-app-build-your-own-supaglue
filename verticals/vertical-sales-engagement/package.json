@@ -4,6 +4,7 @@
     "@opensdks/sdk-apollo": "0.0.20",
     "@opensdks/sdk-outreach": "0.0.15",
     "@opensdks/sdk-salesloft": "0.0.16",
-    "@supaglue/vdk": "workspace:*"
+    "@supaglue/vdk": "workspace:*",
+    "@supaglue/worker": "workspace:*"
   }
 }

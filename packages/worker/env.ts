@@ -10,7 +10,7 @@ export const env = createEnv({
     NANGO_SECRET_KEY: z.string(),
     POSTGRES_URL: z.string(),
     NHOST_GRAPHQL_URL: z.string(),
-    NHOST_WEBHOOK_SECRET: z.string()
+    NHOST_ADMIN_SECRET: z.string()
   },
   runtimeEnv: process.env,
 })
