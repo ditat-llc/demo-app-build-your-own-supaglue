@@ -60,7 +60,7 @@ export interface paths {
     post: operations['salesEngagement-upsertContact']
   }
   '/crm/v2/account-info': {
-    get: operations['crm-accountInfo']
+    get: operations['crm-getAccountInfo']
   }
   '/crm/v2/{entity}/_count': {
     get: operations['crm-countEntity']
@@ -1475,38 +1475,14 @@ export interface operations {
       }
     }
   }
-  'crm-accountInfo': {
-    parameters: {
-      query?: {
-        id?: string | null
-      }
-    }
+  'crm-getAccountInfo': {
     responses: {
       /** @description Successful response */
       200: {
         content: {
           'application/json': {
-            accountType?: string | null
-            companyCurrency?: string | null
-            utcOffset?: string | null
-            portalId?: number | null
-            uiDomain?: string | null
-            timeZone?: string | null
-            dataHostingLocation?: string | null
-            utcOffsetMilliseconds?: number | null
+            raw_data?: unknown
           }
-        }
-      }
-      /** @description Invalid input data */
-      400: {
-        content: {
-          'application/json': components['schemas']['error.BAD_REQUEST']
-        }
-      }
-      /** @description Not found */
-      404: {
-        content: {
-          'application/json': components['schemas']['error.NOT_FOUND']
         }
       }
       /** @description Internal server error */

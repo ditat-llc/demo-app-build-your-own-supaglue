@@ -23,7 +23,7 @@ import {
   mappers,
   propertiesToFetch,
   reverseMappers,
-  type HSAccountInfo
+  type HSAccountInfo,
 } from './mappers'
 
 const isStandardObjectType = (
@@ -501,20 +501,12 @@ export const hubspotProvider = {
       headers: {authorization: 'Bearer ...'}, // This will be populated by Nango, or you can populate your own...
       links: (defaultLinks) => [...proxyLinks, ...defaultLinks],
     }),
-  accountInfo: async ({instance}) => {
-    const res = await instance.crm_objects.request('GET', '/account-info/v3/details')
-    const rawData = res.data as HSAccountInfo
-
-    return {
-      accountType: rawData?.accountType ?? null,
-      companyCurrency: rawData?.companyCurrency ?? null,
-      utcOffset: rawData?.utcOffset ?? null,
-      portalId: rawData?.portalId ?? null,
-      uiDomain: rawData?.uiDomain ?? null,
-      timeZone: rawData?.timeZone ?? null,
-      dataHostingLocation: rawData?.dataHostingLocation ?? null,
-      utcOffsetMilliseconds: rawData?.utcOffsetMilliseconds ?? null
-    }
+  getAccountInfo: async ({instance}) => {
+    const res = await instance.crm_objects.request(
+      'GET',
+      '/account-info/v3/details',
+    )
+    return {raw_data: res.data}
   },
   listContacts: async ({instance, input, ctx}) =>
     input?.sync_mode === 'full'
