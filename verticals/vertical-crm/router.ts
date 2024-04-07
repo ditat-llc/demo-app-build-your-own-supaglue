@@ -17,6 +17,20 @@ function oapi(meta: NonNullable<RouterMeta['openapi']>): RouterMeta {
 }
 
 export const crmRouter = trpc.router({
+  accountInfo: remoteProcedure
+    .meta(oapi({method: 'GET', path: '/account-info'}))
+    .input(z.object({id: z.string().nullish()}))
+    .output(z.object({
+      accountType: z.string().nullish(),
+      companyCurrency: z.string().nullish(),
+      utcOffset: z.string().nullish(),
+      portalId: z.number().nullish(),
+      uiDomain: z.string().nullish(),
+      timeZone: z.string().nullish(),
+      dataHostingLocation: z.string().nullish(),
+      utcOffsetMilliseconds: z.number().nullish()
+    }))
+    .query(async ({input, ctx}) => proxyCallProvider({input, ctx})),
   countEntity: remoteProcedure
     .meta(oapi({method: 'GET', path: '/{entity}/_count'}))
     .input(z.object({entity: z.string()}))

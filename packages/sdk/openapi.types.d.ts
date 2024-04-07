@@ -59,6 +59,9 @@ export interface paths {
   '/engagement/v2/contact/_upsert': {
     post: operations['salesEngagement-upsertContact']
   }
+  '/crm/v2/account-info': {
+    get: operations['crm-accountInfo']
+  }
   '/crm/v2/{entity}/_count': {
     get: operations['crm-countEntity']
   }
@@ -1472,6 +1475,48 @@ export interface operations {
       }
     }
   }
+  'crm-accountInfo': {
+    parameters: {
+      query?: {
+        id?: string | null
+      }
+    }
+    responses: {
+      /** @description Successful response */
+      200: {
+        content: {
+          'application/json': {
+            accountType?: string | null
+            companyCurrency?: string | null
+            utcOffset?: string | null
+            portalId?: number | null
+            uiDomain?: string | null
+            timeZone?: string | null
+            dataHostingLocation?: string | null
+            utcOffsetMilliseconds?: number | null
+          }
+        }
+      }
+      /** @description Invalid input data */
+      400: {
+        content: {
+          'application/json': components['schemas']['error.BAD_REQUEST']
+        }
+      }
+      /** @description Not found */
+      404: {
+        content: {
+          'application/json': components['schemas']['error.NOT_FOUND']
+        }
+      }
+      /** @description Internal server error */
+      500: {
+        content: {
+          'application/json': components['schemas']['error.INTERNAL_SERVER_ERROR']
+        }
+      }
+    }
+  }
   'crm-countEntity': {
     parameters: {
       path: {
@@ -1668,7 +1713,7 @@ export interface operations {
       /** @description Successful response */
       200: {
         content: {
-          'application/json': unknown
+          'application/json': components['schemas']['crm.account'][]
         }
       }
       /** @description Invalid input data */
@@ -1886,7 +1931,7 @@ export interface operations {
       /** @description Successful response */
       200: {
         content: {
-          'application/json': unknown
+          'application/json': components['schemas']['crm.contact'][]
         }
       }
       /** @description Invalid input data */

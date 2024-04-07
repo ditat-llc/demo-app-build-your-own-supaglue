@@ -7,6 +7,17 @@ export type SimplePublicObject =
   Oas_crm_contacts['components']['schemas']['SimplePublicObject']
 export type Owner = Oas_crm_owners['components']['schemas']['PublicOwner']
 
+export type HSAccountInfo = {
+  accountType?: string,
+  companyCurrency?: string
+  utcOffset?: string
+  portalId?: number
+  uiDomain?: string
+  timeZone?: string
+  dataHostingLocation?: string
+  utcOffsetMilliseconds?: number
+}
+
 export const HUBSPOT_OBJECT_SINGULAR_TO_PLURAL = {
   company: 'companies',
   contact: 'contacts',

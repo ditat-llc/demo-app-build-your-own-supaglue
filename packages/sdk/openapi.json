@@ -171,10 +171,16 @@
                 "type": "object",
                 "properties": {
                   "name": {
-                    "type": ["string", "null"]
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "email": {
-                    "type": ["string", "null"],
+                    "type": [
+                      "string",
+                      "null"
+                    ],
                     "description": "Email, but not validated as data from Supaglue has invalid emails for now"
                   }
                 }
@@ -478,19 +484,30 @@
                 "type": "object",
                 "properties": {
                   "destination_config": {
-                    "type": ["object", "null"],
+                    "type": [
+                      "object",
+                      "null"
+                    ],
                     "properties": {
                       "type": {
                         "type": "string"
                       },
                       "schema": {
-                        "type": ["string", "null"]
+                        "type": [
+                          "string",
+                          "null"
+                        ]
                       }
                     },
-                    "required": ["type"]
+                    "required": [
+                      "type"
+                    ]
                   },
                   "unified_objects": {
-                    "type": ["array", "null"],
+                    "type": [
+                      "array",
+                      "null"
+                    ],
                     "items": {
                       "type": "object",
                       "properties": {
@@ -498,11 +515,16 @@
                           "type": "string"
                         }
                       },
-                      "required": ["object"]
+                      "required": [
+                        "object"
+                      ]
                     }
                   },
                   "standard_objects": {
-                    "type": ["array", "null"],
+                    "type": [
+                      "array",
+                      "null"
+                    ],
                     "items": {
                       "type": "object",
                       "properties": {
@@ -510,11 +532,16 @@
                           "type": "string"
                         }
                       },
-                      "required": ["object"]
+                      "required": [
+                        "object"
+                      ]
                     }
                   },
                   "custom_objects": {
-                    "type": ["array", "null"],
+                    "type": [
+                      "array",
+                      "null"
+                    ],
                     "items": {
                       "type": "object",
                       "properties": {
@@ -522,7 +549,9 @@
                           "type": "string"
                         }
                       },
-                      "required": ["object"]
+                      "required": [
+                        "object"
+                      ]
                     }
                   }
                 }
@@ -582,7 +611,10 @@
             "in": "query",
             "name": "cursor",
             "schema": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           }
         ],
@@ -595,7 +627,10 @@
                   "type": "object",
                   "properties": {
                     "next_page_cursor": {
-                      "type": ["string", "null"]
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     },
                     "items": {
                       "type": "array",
@@ -604,7 +639,9 @@
                       }
                     }
                   },
-                  "required": ["items"]
+                  "required": [
+                    "items"
+                  ]
                 }
               }
             }
@@ -650,7 +687,10 @@
             "in": "query",
             "name": "cursor",
             "schema": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           }
         ],
@@ -663,7 +703,10 @@
                   "type": "object",
                   "properties": {
                     "next_page_cursor": {
-                      "type": ["string", "null"]
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     },
                     "items": {
                       "type": "array",
@@ -672,7 +715,9 @@
                       }
                     }
                   },
-                  "required": ["items"]
+                  "required": [
+                    "items"
+                  ]
                 }
               }
             }
@@ -718,7 +763,10 @@
             "in": "query",
             "name": "cursor",
             "schema": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           }
         ],
@@ -731,7 +779,10 @@
                   "type": "object",
                   "properties": {
                     "next_page_cursor": {
-                      "type": ["string", "null"]
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     },
                     "items": {
                       "type": "array",
@@ -740,7 +791,9 @@
                       }
                     }
                   },
-                  "required": ["items"]
+                  "required": [
+                    "items"
+                  ]
                 }
               }
             }
@@ -802,14 +855,23 @@
                         "example": "b854e510-1c40-4ef6-ade4-8eb35f49d331"
                       },
                       "user_id": {
-                        "type": ["string", "null"],
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "example": "c590dc63-8e43-48a4-8154-1fbb00ac936b"
                       }
                     },
-                    "required": ["contact_id", "mailbox_id", "sequence_id"]
+                    "required": [
+                      "contact_id",
+                      "mailbox_id",
+                      "sequence_id"
+                    ]
                   }
                 },
-                "required": ["record"]
+                "required": [
+                  "record"
+                ]
               }
             }
           }
@@ -829,7 +891,9 @@
                           "type": "string"
                         }
                       },
-                      "required": ["id"]
+                      "required": [
+                        "id"
+                      ]
                     }
                   }
                 }
@@ -867,7 +931,10 @@
             "in": "query",
             "name": "cursor",
             "schema": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           }
         ],
@@ -880,7 +947,10 @@
                   "type": "object",
                   "properties": {
                     "next_page_cursor": {
-                      "type": ["string", "null"]
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     },
                     "items": {
                       "type": "array",
@@ -889,7 +959,9 @@
                       }
                     }
                   },
-                  "required": ["items"]
+                  "required": [
+                    "items"
+                  ]
                 }
               }
             }
@@ -935,7 +1007,10 @@
             "in": "query",
             "name": "cursor",
             "schema": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           }
         ],
@@ -948,7 +1023,10 @@
                   "type": "object",
                   "properties": {
                     "next_page_cursor": {
-                      "type": ["string", "null"]
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     },
                     "items": {
                       "type": "array",
@@ -957,7 +1035,9 @@
                       }
                     }
                   },
-                  "required": ["items"]
+                  "required": [
+                    "items"
+                  ]
                 }
               }
             }
@@ -1003,7 +1083,10 @@
             "in": "query",
             "name": "cursor",
             "schema": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           }
         ],
@@ -1016,7 +1099,10 @@
                   "type": "object",
                   "properties": {
                     "next_page_cursor": {
-                      "type": ["string", "null"]
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     },
                     "items": {
                       "type": "array",
@@ -1025,7 +1111,9 @@
                       }
                     }
                   },
-                  "required": ["items"]
+                  "required": [
+                    "items"
+                  ]
                 }
               }
             }
@@ -1077,23 +1165,38 @@
                     "type": "object",
                     "properties": {
                       "name": {
-                        "type": ["string", "null"],
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "example": "My Company"
                       },
                       "domain": {
-                        "type": ["string", "null"],
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "example": "mycompany.com"
                       },
                       "owner_id": {
-                        "type": ["string", "null"],
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "example": "9f3e97fd-4d5d-4efc-959d-bbebfac079f5"
                       },
                       "account_id": {
-                        "type": ["string", "null"],
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "example": "ae4be028-9078-4850-a0bf-d2112b7c4d11"
                       },
                       "custom_fields": {
-                        "type": ["object", "null"],
+                        "type": [
+                          "object",
+                          "null"
+                        ],
                         "additionalProperties": {}
                       }
                     }
@@ -1112,7 +1215,10 @@
                     }
                   }
                 },
-                "required": ["record", "upsert_on"]
+                "required": [
+                  "record",
+                  "upsert_on"
+                ]
               }
             }
           }
@@ -1132,7 +1238,9 @@
                           "type": "string"
                         }
                       },
-                      "required": ["id"]
+                      "required": [
+                        "id"
+                      ]
                     }
                   }
                 }
@@ -1176,37 +1284,64 @@
                     "type": "object",
                     "properties": {
                       "first_name": {
-                        "type": ["string", "null"],
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "example": "James"
                       },
                       "last_name": {
-                        "type": ["string", "null"],
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "example": "Smith"
                       },
                       "job_title": {
-                        "type": ["string", "null"],
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "example": "CEO"
                       },
                       "address": {
                         "type": "object",
                         "properties": {
                           "city": {
-                            "type": ["string", "null"]
+                            "type": [
+                              "string",
+                              "null"
+                            ]
                           },
                           "country": {
-                            "type": ["string", "null"]
+                            "type": [
+                              "string",
+                              "null"
+                            ]
                           },
                           "postal_code": {
-                            "type": ["string", "null"]
+                            "type": [
+                              "string",
+                              "null"
+                            ]
                           },
                           "state": {
-                            "type": ["string", "null"]
+                            "type": [
+                              "string",
+                              "null"
+                            ]
                           },
                           "street_1": {
-                            "type": ["string", "null"]
+                            "type": [
+                              "string",
+                              "null"
+                            ]
                           },
                           "street_2": {
-                            "type": ["string", "null"]
+                            "type": [
+                              "string",
+                              "null"
+                            ]
                           }
                         },
                         "example": {
@@ -1227,11 +1362,20 @@
                               "type": "string"
                             },
                             "email_address_type": {
-                              "type": ["string", "null"],
-                              "enum": ["primary", "personal", "work"]
+                              "type": [
+                                "string",
+                                "null"
+                              ],
+                              "enum": [
+                                "primary",
+                                "personal",
+                                "work"
+                              ]
                             }
                           },
-                          "required": ["email_address"]
+                          "required": [
+                            "email_address"
+                          ]
                         },
                         "example": [
                           {
@@ -1259,7 +1403,10 @@
                               ]
                             }
                           },
-                          "required": ["phone_number", "phone_number_type"]
+                          "required": [
+                            "phone_number",
+                            "phone_number_type"
+                          ]
                         },
                         "example": [
                           {
@@ -1269,19 +1416,32 @@
                         ]
                       },
                       "owner_id": {
-                        "type": ["string", "null"],
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "example": "9f3e97fd-4d5d-4efc-959d-bbebfac079f5"
                       },
                       "account_id": {
-                        "type": ["string", "null"],
+                        "type": [
+                          "string",
+                          "null"
+                        ],
                         "example": "ae4be028-9078-4850-a0bf-d2112b7c4d11"
                       },
                       "custom_fields": {
-                        "type": ["object", "null"],
+                        "type": [
+                          "object",
+                          "null"
+                        ],
                         "additionalProperties": {}
                       }
                     },
-                    "required": ["address", "email_addresses", "phone_numbers"]
+                    "required": [
+                      "address",
+                      "email_addresses",
+                      "phone_numbers"
+                    ]
                   },
                   "upsert_on": {
                     "type": "object",
@@ -1293,7 +1453,10 @@
                     }
                   }
                 },
-                "required": ["record", "upsert_on"]
+                "required": [
+                  "record",
+                  "upsert_on"
+                ]
               }
             }
           }
@@ -1313,7 +1476,9 @@
                           "type": "string"
                         }
                       },
-                      "required": ["id"]
+                      "required": [
+                        "id"
+                      ]
                     }
                   }
                 }
@@ -1326,6 +1491,115 @@
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/error.BAD_REQUEST"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Internal server error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error.INTERNAL_SERVER_ERROR"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/crm/v2/account-info": {
+      "get": {
+        "operationId": "crm-accountInfo",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "id",
+            "schema": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "accountType": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "companyCurrency": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "utcOffset": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "portalId": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    },
+                    "uiDomain": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "timeZone": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "dataHostingLocation": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "utcOffsetMilliseconds": {
+                      "type": [
+                        "number",
+                        "null"
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid input data",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error.BAD_REQUEST"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Not found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/error.NOT_FOUND"
                 }
               }
             }
@@ -1368,7 +1642,9 @@
                       "type": "number"
                     }
                   },
-                  "required": ["count"]
+                  "required": [
+                    "count"
+                  ]
                 }
               }
             }
@@ -1415,14 +1691,20 @@
             "name": "sync_mode",
             "schema": {
               "type": "string",
-              "enum": ["full", "incremental"]
+              "enum": [
+                "full",
+                "incremental"
+              ]
             }
           },
           {
             "in": "query",
             "name": "cursor",
             "schema": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           },
           {
@@ -1442,7 +1724,10 @@
                   "type": "object",
                   "properties": {
                     "next_cursor": {
-                      "type": ["string", "null"]
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     },
                     "has_next_page": {
                       "type": "boolean"
@@ -1454,7 +1739,10 @@
                       }
                     }
                   },
-                  "required": ["has_next_page", "items"]
+                  "required": [
+                    "has_next_page",
+                    "items"
+                  ]
                 }
               }
             }
@@ -1504,7 +1792,9 @@
                     "$ref": "#/components/schemas/crm.account_input"
                   }
                 },
-                "required": ["record"]
+                "required": [
+                  "record"
+                ]
               }
             }
           }
@@ -1521,7 +1811,9 @@
                       "$ref": "#/components/schemas/crm.account"
                     }
                   },
-                  "required": ["record"]
+                  "required": [
+                    "record"
+                  ]
                 }
               }
             }
@@ -1575,7 +1867,9 @@
                     },
                     "raw": {}
                   },
-                  "required": ["record"]
+                  "required": [
+                    "record"
+                  ]
                 }
               }
             }
@@ -1635,7 +1929,9 @@
                     "$ref": "#/components/schemas/crm.account_input"
                   }
                 },
-                "required": ["record"]
+                "required": [
+                  "record"
+                ]
               }
             }
           }
@@ -1652,7 +1948,9 @@
                       "$ref": "#/components/schemas/crm.account"
                     }
                   },
-                  "required": ["record"]
+                  "required": [
+                    "record"
+                  ]
                 }
               }
             }
@@ -1713,7 +2011,10 @@
                     }
                   }
                 },
-                "required": ["ids", "properties"]
+                "required": [
+                  "ids",
+                  "properties"
+                ]
               }
             }
           }
@@ -1723,7 +2024,12 @@
             "description": "Successful response",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/crm.account"
+                  }
+                }
               }
             }
           },
@@ -1765,7 +2071,10 @@
                     "properties": {
                       "key": {
                         "type": "string",
-                        "enum": ["domain", "website"],
+                        "enum": [
+                          "domain",
+                          "website"
+                        ],
                         "description": "The key to upsert on. Only `website` is supported for Salesforce, while both `domain` and `website` are supported for Hubspot."
                       },
                       "values": {
@@ -1776,13 +2085,19 @@
                         "description": "The values to upsert on. If more than one value is provided, it will act as a logical OR. If more than one account is found that matches, then an error will be thrown."
                       }
                     },
-                    "required": ["key", "values"]
+                    "required": [
+                      "key",
+                      "values"
+                    ]
                   },
                   "record": {
                     "$ref": "#/components/schemas/crm.account_input"
                   }
                 },
-                "required": ["upsert_on", "record"]
+                "required": [
+                  "upsert_on",
+                  "record"
+                ]
               }
             }
           }
@@ -1799,7 +2114,9 @@
                       "$ref": "#/components/schemas/crm.account"
                     }
                   },
-                  "required": ["record"]
+                  "required": [
+                    "record"
+                  ]
                 }
               }
             }
@@ -1836,14 +2153,20 @@
             "name": "sync_mode",
             "schema": {
               "type": "string",
-              "enum": ["full", "incremental"]
+              "enum": [
+                "full",
+                "incremental"
+              ]
             }
           },
           {
             "in": "query",
             "name": "cursor",
             "schema": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           },
           {
@@ -1863,7 +2186,10 @@
                   "type": "object",
                   "properties": {
                     "next_cursor": {
-                      "type": ["string", "null"]
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     },
                     "has_next_page": {
                       "type": "boolean"
@@ -1875,7 +2201,10 @@
                       }
                     }
                   },
-                  "required": ["has_next_page", "items"]
+                  "required": [
+                    "has_next_page",
+                    "items"
+                  ]
                 }
               }
             }
@@ -1925,7 +2254,9 @@
                     "$ref": "#/components/schemas/crm.contact_input"
                   }
                 },
-                "required": ["record"]
+                "required": [
+                  "record"
+                ]
               }
             }
           }
@@ -1942,7 +2273,9 @@
                       "$ref": "#/components/schemas/crm.contact"
                     }
                   },
-                  "required": ["record"]
+                  "required": [
+                    "record"
+                  ]
                 }
               }
             }
@@ -1996,7 +2329,9 @@
                     },
                     "raw": {}
                   },
-                  "required": ["record"]
+                  "required": [
+                    "record"
+                  ]
                 }
               }
             }
@@ -2056,7 +2391,9 @@
                     "$ref": "#/components/schemas/crm.contact_input"
                   }
                 },
-                "required": ["record"]
+                "required": [
+                  "record"
+                ]
               }
             }
           }
@@ -2073,7 +2410,9 @@
                       "$ref": "#/components/schemas/crm.contact"
                     }
                   },
-                  "required": ["record"]
+                  "required": [
+                    "record"
+                  ]
                 }
               }
             }
@@ -2134,7 +2473,10 @@
                     }
                   }
                 },
-                "required": ["ids", "properties"]
+                "required": [
+                  "ids",
+                  "properties"
+                ]
               }
             }
           }
@@ -2144,7 +2486,12 @@
             "description": "Successful response",
             "content": {
               "application/json": {
-                "schema": {}
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/crm.contact"
+                  }
+                }
               }
             }
           },
@@ -2186,7 +2533,9 @@
                     "properties": {
                       "key": {
                         "type": "string",
-                        "enum": ["email"],
+                        "enum": [
+                          "email"
+                        ],
                         "description": "The key to upsert on. Only `email` is supported for all providers."
                       },
                       "values": {
@@ -2197,13 +2546,19 @@
                         "description": "The values to upsert on. If more than one value is provided, it will act as a logical OR. If more than one record is found that matches, then an error will be thrown."
                       }
                     },
-                    "required": ["key", "values"]
+                    "required": [
+                      "key",
+                      "values"
+                    ]
                   },
                   "record": {
                     "$ref": "#/components/schemas/crm.contact_input"
                   }
                 },
-                "required": ["upsert_on", "record"]
+                "required": [
+                  "upsert_on",
+                  "record"
+                ]
               }
             }
           }
@@ -2220,7 +2575,9 @@
                       "$ref": "#/components/schemas/crm.contact"
                     }
                   },
-                  "required": ["record"]
+                  "required": [
+                    "record"
+                  ]
                 }
               }
             }
@@ -2257,14 +2614,20 @@
             "name": "sync_mode",
             "schema": {
               "type": "string",
-              "enum": ["full", "incremental"]
+              "enum": [
+                "full",
+                "incremental"
+              ]
             }
           },
           {
             "in": "query",
             "name": "cursor",
             "schema": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           },
           {
@@ -2284,7 +2647,10 @@
                   "type": "object",
                   "properties": {
                     "next_cursor": {
-                      "type": ["string", "null"]
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     },
                     "has_next_page": {
                       "type": "boolean"
@@ -2296,7 +2662,10 @@
                       }
                     }
                   },
-                  "required": ["has_next_page", "items"]
+                  "required": [
+                    "has_next_page",
+                    "items"
+                  ]
                 }
               }
             }
@@ -2360,7 +2729,9 @@
                     },
                     "raw": {}
                   },
-                  "required": ["record"]
+                  "required": [
+                    "record"
+                  ]
                 }
               }
             }
@@ -2407,14 +2778,20 @@
             "name": "sync_mode",
             "schema": {
               "type": "string",
-              "enum": ["full", "incremental"]
+              "enum": [
+                "full",
+                "incremental"
+              ]
             }
           },
           {
             "in": "query",
             "name": "cursor",
             "schema": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           },
           {
@@ -2434,7 +2811,10 @@
                   "type": "object",
                   "properties": {
                     "next_cursor": {
-                      "type": ["string", "null"]
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     },
                     "has_next_page": {
                       "type": "boolean"
@@ -2446,7 +2826,10 @@
                       }
                     }
                   },
-                  "required": ["has_next_page", "items"]
+                  "required": [
+                    "has_next_page",
+                    "items"
+                  ]
                 }
               }
             }
@@ -2510,7 +2893,9 @@
                     },
                     "raw": {}
                   },
-                  "required": ["record"]
+                  "required": [
+                    "record"
+                  ]
                 }
               }
             }
@@ -2557,14 +2942,20 @@
             "name": "sync_mode",
             "schema": {
               "type": "string",
-              "enum": ["full", "incremental"]
+              "enum": [
+                "full",
+                "incremental"
+              ]
             }
           },
           {
             "in": "query",
             "name": "cursor",
             "schema": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           },
           {
@@ -2584,7 +2975,10 @@
                   "type": "object",
                   "properties": {
                     "next_cursor": {
-                      "type": ["string", "null"]
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     },
                     "has_next_page": {
                       "type": "boolean"
@@ -2596,7 +2990,10 @@
                       }
                     }
                   },
-                  "required": ["has_next_page", "items"]
+                  "required": [
+                    "has_next_page",
+                    "items"
+                  ]
                 }
               }
             }
@@ -2660,7 +3057,9 @@
                     },
                     "raw": {}
                   },
-                  "required": ["record"]
+                  "required": [
+                    "record"
+                  ]
                 }
               }
             }
@@ -2715,14 +3114,20 @@
             "name": "sync_mode",
             "schema": {
               "type": "string",
-              "enum": ["full", "incremental"]
+              "enum": [
+                "full",
+                "incremental"
+              ]
             }
           },
           {
             "in": "query",
             "name": "cursor",
             "schema": {
-              "type": ["string", "null"]
+              "type": [
+                "string",
+                "null"
+              ]
             }
           },
           {
@@ -2742,7 +3147,10 @@
                   "type": "object",
                   "properties": {
                     "next_cursor": {
-                      "type": ["string", "null"]
+                      "type": [
+                        "string",
+                        "null"
+                      ]
                     },
                     "has_next_page": {
                       "type": "boolean"
@@ -2752,7 +3160,10 @@
                       "items": {}
                     }
                   },
-                  "required": ["has_next_page", "items"]
+                  "required": [
+                    "has_next_page",
+                    "items"
+                  ]
                 }
               }
             }
@@ -2813,7 +3224,9 @@
                     "additionalProperties": {}
                   }
                 },
-                "required": ["record"]
+                "required": [
+                  "record"
+                ]
               }
             }
           }
@@ -2870,7 +3283,10 @@
             "name": "type",
             "schema": {
               "type": "string",
-              "enum": ["standard", "custom"]
+              "enum": [
+                "standard",
+                "custom"
+              ]
             }
           }
         ],
@@ -2934,7 +3350,10 @@
                     "type": "string"
                   },
                   "description": {
-                    "type": ["string", "null"]
+                    "type": [
+                      "string",
+                      "null"
+                    ]
                   },
                   "labels": {
                     "type": "object",
@@ -2946,7 +3365,10 @@
                         "type": "string"
                       }
                     },
-                    "required": ["singular", "plural"]
+                    "required": [
+                      "singular",
+                      "plural"
+                    ]
                   },
                   "primary_field_id": {
                     "type": "string"
@@ -3116,7 +3538,9 @@
                       }
                     }
                   },
-                  "required": ["association_schema"]
+                  "required": [
+                    "association_schema"
+                  ]
                 }
               }
             }
@@ -3246,24 +3670,39 @@
               },
               "vertical": {
                 "type": "string",
-                "enum": ["crm", "engagement"]
+                "enum": [
+                  "crm",
+                  "engagement"
+                ]
               },
               "sync_mode": {
                 "type": "string",
-                "enum": ["full", "incremental"]
+                "enum": [
+                  "full",
+                  "incremental"
+                ]
               }
             },
-            "required": ["provider_names", "vertical", "sync_mode"]
+            "required": [
+              "provider_names",
+              "vertical",
+              "sync_mode"
+            ]
           },
           "name": {
             "type": "string",
-            "enum": ["scheduler.requested"]
+            "enum": [
+              "scheduler.requested"
+            ]
           },
           "id": {
             "type": "string"
           }
         },
-        "required": ["data", "name"]
+        "required": [
+          "data",
+          "name"
+        ]
       },
       "webhooks.sync.requested": {
         "type": "object",
@@ -3279,7 +3718,10 @@
               },
               "vertical": {
                 "type": "string",
-                "enum": ["crm", "engagement"]
+                "enum": [
+                  "crm",
+                  "engagement"
+                ]
               },
               "unified_objects": {
                 "type": "array",
@@ -3301,7 +3743,10 @@
               },
               "sync_mode": {
                 "type": "string",
-                "enum": ["full", "incremental"],
+                "enum": [
+                  "full",
+                  "incremental"
+                ],
                 "description": "Incremental by default"
               },
               "destination_schema": {
@@ -3311,17 +3756,26 @@
                 "type": "number"
               }
             },
-            "required": ["customer_id", "provider_name", "vertical"]
+            "required": [
+              "customer_id",
+              "provider_name",
+              "vertical"
+            ]
           },
           "name": {
             "type": "string",
-            "enum": ["sync.requested"]
+            "enum": [
+              "sync.requested"
+            ]
           },
           "id": {
             "type": "string"
           }
         },
-        "required": ["data", "name"]
+        "required": [
+          "data",
+          "name"
+        ]
       },
       "webhooks.sync.completed": {
         "type": "object",
@@ -3337,7 +3791,10 @@
               },
               "vertical": {
                 "type": "string",
-                "enum": ["crm", "engagement"]
+                "enum": [
+                  "crm",
+                  "engagement"
+                ]
               },
               "unified_objects": {
                 "type": "array",
@@ -3359,7 +3816,10 @@
               },
               "sync_mode": {
                 "type": "string",
-                "enum": ["full", "incremental"],
+                "enum": [
+                  "full",
+                  "incremental"
+                ],
                 "description": "Incremental by default"
               },
               "destination_schema": {
@@ -3402,13 +3862,18 @@
           },
           "name": {
             "type": "string",
-            "enum": ["sync.completed"]
+            "enum": [
+              "sync.completed"
+            ]
           },
           "id": {
             "type": "string"
           }
         },
-        "required": ["data", "name"]
+        "required": [
+          "data",
+          "name"
+        ]
       },
       "webhooks.connection.created": {
         "type": "object",
@@ -3423,17 +3888,25 @@
                 "type": "string"
               }
             },
-            "required": ["customer_id", "provider_name"]
+            "required": [
+              "customer_id",
+              "provider_name"
+            ]
           },
           "name": {
             "type": "string",
-            "enum": ["connection.created"]
+            "enum": [
+              "connection.created"
+            ]
           },
           "id": {
             "type": "string"
           }
         },
-        "required": ["data", "name"]
+        "required": [
+          "data",
+          "name"
+        ]
       },
       "error.INTERNAL_SERVER_ERROR": {
         "type": "object",
@@ -3457,13 +3930,18 @@
                   "type": "string"
                 }
               },
-              "required": ["message"]
+              "required": [
+                "message"
+              ]
             },
             "description": "An array of issues that were responsible for the error",
             "example": []
           }
         },
-        "required": ["message", "code"],
+        "required": [
+          "message",
+          "code"
+        ],
         "title": "Error",
         "description": "The error information",
         "example": {
@@ -3479,14 +3957,22 @@
             "type": "string"
           },
           "name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "email": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "description": "Email, but not validated as data from Supaglue has invalid emails for now"
           }
         },
-        "required": ["customer_id"]
+        "required": [
+          "customer_id"
+        ]
       },
       "error.BAD_REQUEST": {
         "type": "object",
@@ -3510,13 +3996,18 @@
                   "type": "string"
                 }
               },
-              "required": ["message"]
+              "required": [
+                "message"
+              ]
             },
             "description": "An array of issues that were responsible for the error",
             "example": []
           }
         },
-        "required": ["message", "code"],
+        "required": [
+          "message",
+          "code"
+        ],
         "title": "Error",
         "description": "The error information",
         "example": {
@@ -3547,13 +4038,18 @@
                   "type": "string"
                 }
               },
-              "required": ["message"]
+              "required": [
+                "message"
+              ]
             },
             "description": "An array of issues that were responsible for the error",
             "example": []
           }
         },
-        "required": ["message", "code"],
+        "required": [
+          "message",
+          "code"
+        ],
         "title": "Error",
         "description": "The error information",
         "example": {
@@ -3575,7 +4071,11 @@
             "type": "string"
           }
         },
-        "required": ["id", "customer_id", "provider_name"]
+        "required": [
+          "id",
+          "customer_id",
+          "provider_name"
+        ]
       },
       "sync_config": {
         "allOf": [
@@ -3589,11 +4089,16 @@
                 "type": "string"
               },
               "auto_start_on_connection": {
-                "type": ["boolean", "null"],
+                "type": [
+                  "boolean",
+                  "null"
+                ],
                 "description": "If true, the sync will start automatically when the connection is created."
               }
             },
-            "required": ["provider_name"]
+            "required": [
+              "provider_name"
+            ]
           }
         ]
       },
@@ -3601,19 +4106,30 @@
         "type": "object",
         "properties": {
           "destination_config": {
-            "type": ["object", "null"],
+            "type": [
+              "object",
+              "null"
+            ],
             "properties": {
               "type": {
                 "type": "string"
               },
               "schema": {
-                "type": ["string", "null"]
+                "type": [
+                  "string",
+                  "null"
+                ]
               }
             },
-            "required": ["type"]
+            "required": [
+              "type"
+            ]
           },
           "unified_objects": {
-            "type": ["array", "null"],
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "type": "object",
               "properties": {
@@ -3621,11 +4137,16 @@
                   "type": "string"
                 }
               },
-              "required": ["object"]
+              "required": [
+                "object"
+              ]
             }
           },
           "standard_objects": {
-            "type": ["array", "null"],
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "type": "object",
               "properties": {
@@ -3633,11 +4154,16 @@
                   "type": "string"
                 }
               },
-              "required": ["object"]
+              "required": [
+                "object"
+              ]
             }
           },
           "custom_objects": {
-            "type": ["array", "null"],
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "type": "object",
               "properties": {
@@ -3645,7 +4171,9 @@
                   "type": "string"
                 }
               },
-              "required": ["object"]
+              "required": [
+                "object"
+              ]
             }
           }
         }
@@ -3773,10 +4301,18 @@
           },
           "email_address_type": {
             "type": "string",
-            "enum": ["primary", "personal", "work", "other"]
+            "enum": [
+              "primary",
+              "personal",
+              "work",
+              "other"
+            ]
           }
         },
-        "required": ["email_address", "email_address_type"]
+        "required": [
+          "email_address",
+          "email_address_type"
+        ]
       },
       "sales-engagement.phone_number": {
         "type": "object",
@@ -3786,10 +4322,19 @@
           },
           "phone_number_type": {
             "type": "string",
-            "enum": ["primary", "work", "home", "mobile", "other"]
+            "enum": [
+              "primary",
+              "work",
+              "home",
+              "mobile",
+              "other"
+            ]
           }
         },
-        "required": ["phone_number", "phone_number_type"]
+        "required": [
+          "phone_number",
+          "phone_number_type"
+        ]
       },
       "sales-engagement.sequence": {
         "type": "object",
@@ -4039,53 +4584,92 @@
             "additionalProperties": {}
           },
           "name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "is_deleted": {
-            "type": ["boolean", "null"]
+            "type": [
+              "boolean",
+              "null"
+            ]
           },
           "website": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "industry": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "number_of_employees": {
-            "type": ["number", "null"]
+            "type": [
+              "number",
+              "null"
+            ]
           },
           "owner_id": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "created_at": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "description": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "example": "Integration API"
           },
           "last_activity_at": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "description": "date-time"
           },
           "addresses": {
-            "type": ["array", "null"],
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "$ref": "#/components/schemas/crm.address"
             }
           },
           "phone_numbers": {
-            "type": ["array", "null"],
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "type": "object",
               "properties": {
                 "phone_number": {
-                  "type": ["string", "null"]
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 },
                 "phone_number_type": {
                   "$ref": "#/components/schemas/crm.phone_number_type"
                 }
               },
-              "required": ["phone_number", "phone_number_type"]
+              "required": [
+                "phone_number",
+                "phone_number_type"
+              ]
             }
           },
           "lifecycle_stage": {
@@ -4099,10 +4683,16 @@
             ]
           },
           "last_modified_at": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
-        "required": ["id", "updated_at"]
+        "required": [
+          "id",
+          "updated_at"
+        ]
       },
       "crm.address": {
         "type": "object",
@@ -4111,22 +4701,40 @@
             "$ref": "#/components/schemas/crm.address_type"
           },
           "city": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "country": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "postal_code": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "state": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "street_1": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "street_2": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
         "required": [
@@ -4141,11 +4749,22 @@
       },
       "crm.address_type": {
         "type": "string",
-        "enum": ["primary", "mailing", "other", "billing", "shipping"]
+        "enum": [
+          "primary",
+          "mailing",
+          "other",
+          "billing",
+          "shipping"
+        ]
       },
       "crm.phone_number_type": {
         "type": "string",
-        "enum": ["primary", "mobile", "fax", "other"]
+        "enum": [
+          "primary",
+          "mobile",
+          "fax",
+          "other"
+        ]
       },
       "crm.lifecycle_stage": {
         "type": "string",
@@ -4164,44 +4783,74 @@
         "type": "object",
         "properties": {
           "description": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "example": "Integration API"
           },
           "industry": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "number_of_employees": {
-            "type": ["number", "null"]
+            "type": [
+              "number",
+              "null"
+            ]
           },
           "website": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "addresses": {
-            "type": ["array", "null"],
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "$ref": "#/components/schemas/crm.address"
             }
           },
           "phone_numbers": {
-            "type": ["array", "null"],
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "type": "object",
               "properties": {
                 "phone_number": {
-                  "type": ["string", "null"]
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 },
                 "phone_number_type": {
                   "$ref": "#/components/schemas/crm.phone_number_type"
                 }
               },
-              "required": ["phone_number", "phone_number_type"]
+              "required": [
+                "phone_number",
+                "phone_number_type"
+              ]
             }
           },
           "owner_id": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "lifecycle_stage": {
             "oneOf": [
@@ -4214,7 +4863,10 @@
             ]
           },
           "passthrough_fields": {
-            "type": ["object", "null"],
+            "type": [
+              "object",
+              "null"
+            ],
             "additionalProperties": {}
           }
         }
@@ -4234,41 +4886,71 @@
             "additionalProperties": {}
           },
           "first_name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "last_name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "email": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "description": "Primary email address"
           },
           "phone": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "description": "Primary phone number"
           }
         },
-        "required": ["id", "updated_at"]
+        "required": [
+          "id",
+          "updated_at"
+        ]
       },
       "crm.contact_input": {
         "type": "object",
         "properties": {
           "first_name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "last_name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "email": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "description": "Primary email address"
           },
           "phone": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "description": "Primary phone number"
           },
           "passthrough_fields": {
-            "type": ["object", "null"],
+            "type": [
+              "object",
+              "null"
+            ],
             "additionalProperties": {}
           }
         }
@@ -4288,73 +4970,130 @@
             "additionalProperties": {}
           },
           "name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "first_name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "last_name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "owner_id": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "title": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "company": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "converted_date": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "lead_source": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "converted_account_id": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "converted_contact_id": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "addresses": {
-            "type": ["array", "null"],
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "$ref": "#/components/schemas/crm.address"
             }
           },
           "email_addresses": {
-            "type": ["array", "null"],
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "$ref": "#/components/schemas/crm.email_address"
             }
           },
           "phone_numbers": {
-            "type": ["array", "null"],
+            "type": [
+              "array",
+              "null"
+            ],
             "items": {
               "type": "object",
               "properties": {
                 "phone_number": {
-                  "type": ["string", "null"]
+                  "type": [
+                    "string",
+                    "null"
+                  ]
                 },
                 "phone_number_type": {
                   "$ref": "#/components/schemas/crm.phone_number_type"
                 }
               },
-              "required": ["phone_number", "phone_number_type"]
+              "required": [
+                "phone_number",
+                "phone_number_type"
+              ]
             }
           },
           "created_at": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "is_deleted": {
-            "type": ["boolean", "null"]
+            "type": [
+              "boolean",
+              "null"
+            ]
           },
           "last_modified_at": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
-        "required": ["id", "updated_at"]
+        "required": [
+          "id",
+          "updated_at"
+        ]
       },
       "crm.email_address": {
         "type": "object",
@@ -4366,11 +5105,18 @@
             "$ref": "#/components/schemas/crm.email_address_type"
           }
         },
-        "required": ["email_address", "email_address_type"]
+        "required": [
+          "email_address",
+          "email_address_type"
+        ]
       },
       "crm.email_address_type": {
         "type": "string",
-        "enum": ["primary", "work", "other"]
+        "enum": [
+          "primary",
+          "work",
+          "other"
+        ]
       },
       "crm.opportunity": {
         "type": "object",
@@ -4387,13 +5133,22 @@
             "additionalProperties": {}
           },
           "name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "description": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "owner_id": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "status": {
             "oneOf": [
@@ -4406,38 +5161,72 @@
             ]
           },
           "stage": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "close_date": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "account_id": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "pipeline": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "amount": {
-            "type": ["number", "null"]
+            "type": [
+              "number",
+              "null"
+            ]
           },
           "last_activity_at": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "created_at": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "is_deleted": {
-            "type": ["boolean", "null"]
+            "type": [
+              "boolean",
+              "null"
+            ]
           },
           "last_modified_at": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
-        "required": ["id", "updated_at"]
+        "required": [
+          "id",
+          "updated_at"
+        ]
       },
       "crm.opportunity_status": {
         "type": "string",
-        "enum": ["OPEN", "WON", "LOST"]
+        "enum": [
+          "OPEN",
+          "WON",
+          "LOST"
+        ]
       },
       "crm.user": {
         "type": "object",
@@ -4454,25 +5243,46 @@
             "additionalProperties": {}
           },
           "name": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "email": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "is_active": {
-            "type": ["boolean", "null"]
+            "type": [
+              "boolean",
+              "null"
+            ]
           },
           "created_at": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           },
           "is_deleted": {
-            "type": ["boolean", "null"]
+            "type": [
+              "boolean",
+              "null"
+            ]
           },
           "last_modified_at": {
-            "type": ["string", "null"]
+            "type": [
+              "string",
+              "null"
+            ]
           }
         },
-        "required": ["id", "updated_at"]
+        "required": [
+          "id",
+          "updated_at"
+        ]
       },
       "warning": {
         "type": "object",
@@ -4498,7 +5308,10 @@
             "type": "string"
           }
         },
-        "required": ["id", "name"]
+        "required": [
+          "id",
+          "name"
+        ]
       },
       "crm.meta.custom_object_field": {
         "type": "object",
@@ -4562,7 +5375,11 @@
             "description": "The raw details of the property as provided by the third-party Provider, if available."
           }
         },
-        "required": ["id", "label", "type"]
+        "required": [
+          "id",
+          "label",
+          "type"
+        ]
       },
       "crm.meta.property_type": {
         "type": "string",
@@ -4599,7 +5416,10 @@
             "description": "Defaults to false."
           }
         },
-        "required": ["label", "value"]
+        "required": [
+          "label",
+          "value"
+        ]
       },
       "crm.meta.property": {
         "type": "object",
@@ -4626,7 +5446,10 @@
             "example": {}
           }
         },
-        "required": ["id", "label"]
+        "required": [
+          "id",
+          "label"
+        ]
       },
       "crm.meta.association_schema": {
         "type": "object",
@@ -4646,7 +5469,12 @@
             "type": "string"
           }
         },
-        "required": ["id", "source_object", "target_object", "display_name"]
+        "required": [
+          "id",
+          "source_object",
+          "target_object",
+          "display_name"
+        ]
       }
     }
   }
