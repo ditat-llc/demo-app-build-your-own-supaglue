@@ -457,9 +457,11 @@ const _upsertObject = async <T extends 'contacts' | 'companies'>(
       },
     })
     .then((r) => r.data.results)
-  if (records.length > 1) {
-    throw new BadRequestError(`More than one ${objectType} found for upsert`)
-  }
+  // NOTE: Disabling this because it doesn't matter how many duplicate objects there are.
+  // if (records.length > 1) {
+  //   throw new BadRequestError(`More than one ${objectType} found for upsert`)
+  // }
+
   const existingId = records[0]?.id
   if (!existingId) {
     return _createObject(instance, {objectType, record})
