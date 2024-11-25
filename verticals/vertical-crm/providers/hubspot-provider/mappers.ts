@@ -318,16 +318,17 @@ export const reverseMappers = {
       ),
       lifecyclestage: nullToEmptyString(input.lifecycle_stage),
       hubspot_owner_id: nullToEmptyString(input.owner_id),
-      // only primary phone is supported for hubspot accounts
-      phone:
-        input.phone_numbers?.find((p) => p.phone_number_type === 'primary')
-          ?.phone_number ?? '',
-      address: input.addresses?.[0]?.street_1 ?? '',
-      // NOTE: Support address2 for companies only
-      city: input.addresses?.[0]?.city ?? '',
-      state: input.addresses?.[0]?.state ?? '',
-      zip: input.addresses?.[0]?.postal_code ?? '',
-      country: input.addresses?.[0]?.country ?? '',
+      // FIXME: Disabled setting empty value for phone, address, city, state, zip and country fields
+      // // only primary phone is supported for hubspot accounts
+      // phone:
+      //   input.phone_numbers?.find((p) => p.phone_number_type === 'primary')
+      //     ?.phone_number ?? '',
+      // address: input.addresses?.[0]?.street_1 ?? '',
+      // // NOTE: Support address2 for companies only
+      // city: input.addresses?.[0]?.city ?? '',
+      // state: input.addresses?.[0]?.state ?? '',
+      // zip: input.addresses?.[0]?.postal_code ?? '',
+      // country: input.addresses?.[0]?.country ?? '',
       ...getIfObject(input.passthrough_fields, 'properties'),
     }),
   })),
