@@ -195,8 +195,7 @@ const _listObjectsIncrementalThenMap = async <TIn, TOut extends BaseRecord>(
               },
             ]
           : [],
-        // after: cursor?.next_offset ?? '',
-        after: cursor?.next_offset ? `${Math.min(Number.parseInt(cursor?.next_offset, 10), limit)}` : '',
+        after: cursor?.next_offset ?? '',
         sorts: [
           {
             propertyName: kUpdatedAt,
@@ -249,24 +248,38 @@ const _listObjectsIncrementalThenMap = async <TIn, TOut extends BaseRecord>(
 
   const items = resultsExtended.map(opts.mapper.parse)
   const lastItem = items[items.length - 1]
+
+  if (lastItem) {
+     // offset / offset-like cursor is only usable if the filtering criteria doesn't change, notably the last_updated_at timestamp
+    // in practice this means that we only care about `after` offset when we have more than `limit` number of items modified at the exact
+    // same timestamp
+    const isSameTimestamp = lastItem.updated_at === cursor?.last_updated_at;
+    let nextOffset = isSameTimestamp ? res.data.paging?.next?.after ?? '' : '';
+    let lastUpdatedAt = lastItem.updated_at;
+  
+    // refer to https://developers.hubspot.com/docs/guides/api/crm/search#paging-through-results
+    // the search endpoints are limited to 10,000 total results for any given query. Attempting to page beyond 10,000 will result in a 400 error.
+    // FIXME: this should be a temporary solution by changing lastUpdatedAt a bit
+    // btw, I think this is a rare case because it's uncommon for 10,000 records to be changed at the same time (having the same timestamp).
+    if (Number.parseInt(nextOffset, 10) === 10000) {
+      lastUpdatedAt = new Date(new Date(lastUpdatedAt).setSeconds(new Date(lastUpdatedAt).getSeconds() + 10)).toISOString();
+      nextOffset = '';
+    }
+  
+    return {
+      items,
+      // Not the same as simply items.length === 0
+      has_next_page: !!res.data.paging?.next?.after,
+      next_cursor: LastUpdatedAtNextOffset.toCursor({ last_updated_at: lastUpdatedAt, next_offset: nextOffset || null })
+    };
+  }
+  
   return {
     items,
     // Not the same as simply items.length === 0
     has_next_page: !!res.data.paging?.next?.after,
-    next_cursor:
-      (lastItem
-        ? LastUpdatedAtNextOffset.toCursor({
-            last_updated_at: lastItem.updated_at,
-            next_offset:
-              // offset / offset-like cursor is only usable if the filtering criteria doesn't change, notably the last_updated_at timestamp
-              // in practice this means that we only care about `after` offset when we have more than `limit` number of items modified at the exact
-              // same timestamp
-              lastItem.updated_at === cursor?.last_updated_at
-                ? res.data.paging?.next?.after
-                : undefined,
-          })
-        : opts?.cursor) ?? null,
-  }
+    next_cursor: opts?.cursor ?? null
+  };
 }
 
 // TODO: implement this when reading batch
