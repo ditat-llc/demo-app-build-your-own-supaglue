@@ -195,7 +195,8 @@ const _listObjectsIncrementalThenMap = async <TIn, TOut extends BaseRecord>(
               },
             ]
           : [],
-        after: cursor?.next_offset ?? '',
+        // after: cursor?.next_offset ?? '',
+        after: cursor?.next_offset ? `${Math.min(Number.parseInt(cursor?.next_offset, 10), limit)}` : '',
         sorts: [
           {
             propertyName: kUpdatedAt,
